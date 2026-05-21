@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/colorSelectorTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/color_select_title"
@@ -20,60 +20,265 @@
         app:layout_constraintVertical_bias="0.041" />
 
     <SeekBar
-        android:id="@+id/seekBar4"
-        android:layout_width="300dp"
+        android:id="@+id/redSeekBar"
+        android:layout_width="255dp"
         android:layout_height="44dp"
         android:layout_marginTop="256dp"
+        android:max="255"
+        android:progress="64"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <SeekBar
-        android:id="@+id/seekBar3"
-        android:layout_width="300dp"
+        android:id="@+id/blueSeekBar"
+        android:layout_width="255dp"
         android:layout_height="44dp"
-        android:layout_marginTop="4dp"
+        android:max="255"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/seekBar5" />
+        app:layout_constraintTop_toBottomOf="@+id/greenSeekBar" />
 
     <SeekBar
-        android:id="@+id/seekBar5"
-        android:layout_width="300dp"
+        android:id="@+id/greenSeekBar"
+        android:layout_width="255dp"
         android:layout_height="44dp"
+        android:max="255"
+        android:progress="128"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="302dp" />
+        app:layout_constraintTop_toBottomOf="@+id/redSeekBar" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/colorHexLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/color_rgb_label"
-        tools:layout_editor_absoluteX="92dp"
-        tools:layout_editor_absoluteY="226dp" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="12dp"
         android:text="@string/color_hex_label"
-        tools:layout_editor_absoluteX="92dp"
-        tools:layout_editor_absoluteY="197dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colorView" />
+
+    <TextView
+        android:id="@+id/colorHexOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/hex_output"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.135"
+        app:layout_constraintStart_toEndOf="@+id/colorHexLabel"
+        app:layout_constraintTop_toBottomOf="@+id/colorView" />
+
+    <TextView
+        android:id="@+id/colorRgbLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/color_rgb_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colorHexLabel" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/colorView"
         android:layout_width="106dp"
         android:layout_height="104dp"
         android:layout_marginTop="12dp"
-        android:background="#000000"
+        android:background="#408000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/colorSelectorTitle"
         app:srcCompat="@android:drawable/menuitem_background" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="264dp"
+        android:layout_marginEnd="3dp"
+        android:text="@string/red_label"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/redSeekBar"
+        app:layout_constraintHorizontal_bias="0.258"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="57dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/green_label"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/greenSeekBar"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/blue_label"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/blueSeekBar"
+        app:layout_constraintHorizontal_bias="0.38"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/redValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/red_num"
+        app:layout_constraintStart_toEndOf="@+id/redSeekBar"
+        app:layout_constraintTop_toTopOf="@+id/redSeekBar" />
+
+    <TextView
+        android:id="@+id/greenValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/green_num"
+        app:layout_constraintStart_toEndOf="@+id/greenSeekBar"
+        app:layout_constraintTop_toBottomOf="@+id/redSeekBar" />
+
+    <TextView
+        android:id="@+id/blueValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="11dp"
+        android:text="@string/blue_num"
+        app:layout_constraintStart_toEndOf="@+id/blueSeekBar"
+        app:layout_constraintTop_toTopOf="@+id/blueSeekBar" />
+
+    <Button
+        android:id="@+id/blackButton"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="#C3C3C3"
+        android:text="@string/black_button"
+        android:textColor="#000000"
+        app:cornerRadius="0sp"
+        app:layout_constraintEnd_toStartOf="@+id/blueButton"
+        app:layout_constraintTop_toBottomOf="@+id/blueSeekBar" />
+
+    <Button
+        android:id="@+id/whiteButton"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#C3C3C3"
+        android:text="@string/white_button"
+        android:textColor="#000000"
+        app:cornerRadius="0sp"
+        app:layout_constraintBottom_toTopOf="@+id/resetButton"
+        app:layout_constraintEnd_toStartOf="@+id/blackButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blueSeekBar"
+        app:layout_constraintVertical_bias="0.227" />
+
+    <Button
+        android:id="@+id/blueButton"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="#C3C3C3"
+        android:text="@string/blue_button"
+        android:textColor="#000000"
+        app:cornerRadius="0sp"
+        app:layout_constraintBottom_toTopOf="@+id/resetButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blueSeekBar"
+        app:layout_constraintVertical_bias="0.227" />
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="346dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#C3C3C3"
+        android:text="@string/reset_button"
+        android:textColor="#000000"
+        app:cornerRadius="0sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blackButton"
+        app:layout_constraintVertical_bias="0.083" />
+
+    <TextView
+        android:id="@+id/redRgbVal"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/red_rgb_value"
+        app:layout_constraintEnd_toStartOf="@+id/greenRgbVal"
+        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintStart_toEndOf="@+id/colorRgbLabel"
+        app:layout_constraintTop_toBottomOf="@+id/colorHexOutput" />
+
+    <TextView
+        android:id="@+id/greenRgbVal"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:text="@string/green_rgb_val"
+        app:layout_constraintEnd_toStartOf="@+id/blueRgbVal"
+        app:layout_constraintStart_toEndOf="@+id/redRgbVal"
+        app:layout_constraintTop_toBottomOf="@+id/colorHexOutput" />
+
+    <TextView
+        android:id="@+id/blueRgbVal"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/blue_rgb_val"
+        app:layout_constraintStart_toEndOf="@+id/greenRgbVal"
+        app:layout_constraintTop_toBottomOf="@+id/colorHexOutput" />
+
+    <TextView
+        android:id="@+id/comma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:text="@string/comma"
+        app:layout_constraintEnd_toStartOf="@+id/greenRgbVal"
+        app:layout_constraintStart_toEndOf="@+id/redRgbVal"
+        app:layout_constraintTop_toTopOf="@+id/redRgbVal" />
+
+    <TextView
+        android:id="@+id/comma2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:text="@string/comma"
+        app:layout_constraintEnd_toStartOf="@+id/blueRgbVal"
+        app:layout_constraintStart_toEndOf="@+id/greenRgbVal"
+        app:layout_constraintTop_toTopOf="@+id/greenRgbVal" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

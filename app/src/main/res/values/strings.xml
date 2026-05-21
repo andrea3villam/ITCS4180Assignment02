@@ -3,4 +3,20 @@
     <string name="color_select_title">Color Selection</string>
     <string name="color_hex_label">Color HEX:</string>
     <string name="color_rgb_label">Color RGB:</string>
+    <string name="red_label">Red:</string>
+    <string name="green_label">Green:</string>
+    <string name="blue_label">Blue</string>
+    <string name="hex_output">#408000</string>
+    <string name="rgb_output">(64,128,0)</string>
+    <string name="red_num">64</string>
+    <string name="white_button">White</string>
+    <string name="reset_button">Reset</string>
+    <string name="black_button">Black</string>
+    <string name="blue_button">Blue</string>
+    <string name="red_rgb_value">64</string>
+    <string name="green_rgb_val">128</string>
+    <string name="blue_rgb_val">0</string>
+    <string name="comma">,</string>
+    <string name="green_num">128</string>
+    <string name="blue_num">0</string>
 </resources>
